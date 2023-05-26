@@ -24,15 +24,13 @@
 
     This repository is licensed under the MIT license, click on the badge to learn more.
 
-  ## Contributions
-
-  
-
   ## Testing
 
-  The commands in order to test are   
+  In order to test the application, please run "npm run test" in the terminal.   
   
-  Please run "npm run test" in the terminal
+  ## Demo Video
+
+  You may view the video [here]()
 
   ## Questions
 
