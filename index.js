@@ -66,14 +66,16 @@ function renderShape(shape, selectedColor) {
 function createSVG(data) {
     let yAxis = 125;
     if (data.shape === "Triangle") {
-        yAxis = 160
+        yAxis = 150
     };
     return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-${renderShape(data.shape, data.shapeColor)}
-<text x="150" y="${yAxis}" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}</text></svg>`
+    ${renderShape(data.shape, data.shapeColor)}
+    <text x="150" y="${yAxis}" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}
+    </text>
+    </svg>`
 };
 
-// Writes the svg file to the users storage
+// Writes the SVG file to the users storage
 
 function writeToFile(fileName, data) {
     const fileData = createSVG(data);
