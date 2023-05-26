@@ -64,14 +64,16 @@ function renderShape(shape, selectedColor) {
 };
 
 function createSVG(data) {
-    let yAxis = 125;
+    let yAxis = 100;
+    let xAxis = 100;
+    let fontSize = 60
     if (data.shape === "Triangle") {
-        yAxis = 150
+        yAxis = 130
+        fontSize = 50
     };
-    return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    return `<svg version="1.1" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
     ${renderShape(data.shape, data.shapeColor)}
-    <text x="150" y="${yAxis}" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}
-    </text>
+    <text x="${xAxis}" y="${yAxis}" font-size="${fontSize}" text-anchor="middle" dominant-baseline="middle" fill="${data.textColor}">${data.text}</text>
     </svg>`
 };
 
